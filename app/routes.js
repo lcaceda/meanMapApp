@@ -48,12 +48,13 @@ module.exports = function(app) {
         var lat             = req.body.latitude;
         var long            = req.body.longitude;
         var distance        = req.body.distance;
-        var male            = req.body.male;
-        var female          = req.body.female;
-        var other           = req.body.other;
-        var minAge          = req.body.minAge;
-        var maxAge          = req.body.maxAge;
-        var favLang         = req.body.favlang;
+        var singlspeed            = req.body.singlspeed;
+        var fixie          = req.body.fixie;
+        var tandem           = req.body.tandem;
+        var road          = req.body.road;
+        var cross         = req.body.cross;
+        var height          = req.body.height;
+        // var extras          = req.body.extras;
         var reqVerified     = req.body.reqVerified;
 
         // Opens a generic Mongoose Query. Depending on the post body we will...
@@ -70,25 +71,20 @@ module.exports = function(app) {
 
         }
 
-        // ...include filter by Gender (all options)
-        if(male || female || other){
-            query.or([{ 'gender': male }, { 'gender': female }, {'gender': other}]);
+        // ...include filter by bicycle (all options)
+        if(singlspeed || fixie || tandem || road || cross){
+            query.or([{ 'bicycle': singlspeed }, { 'bicycle': fixie }, {'bicycle': tandem}, {'bicycle': road}, {'bicycle': cross}]);
         }
 
-        // ...include filter by Min Age
-        if(minAge){
-            query = query.where('age').gte(minAge);
+        // ...include filter by height
+        if(height){
+            query = query.where('height').gte(height);
         }
 
-        // ...include filter by Max Age
-        if(maxAge){
-            query = query.where('age').lte(maxAge);
-        }
-
-        // ...include filter by Favorite Language
-        if(favLang){
-            query = query.where('favlang').equals(favLang);
-        }
+        // // ...include filter by extras
+        // if(extras){
+        //     query = query.where('extras').equals(extras);
+        // }
 
         // ...include filter for HTML5 Verified Locations
         if(reqVerified){

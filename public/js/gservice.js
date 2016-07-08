@@ -71,8 +71,7 @@ angular.module('gservice', [])
                 var user = response[i];
 
                 // Create popup windows for each record
-                var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Age</b>: ' + user.age + '<br>' +
-                    '<b>Gender</b>: ' + user.gender + '<br><b>Favorite Language</b>: ' + user.favlang + '</p>';
+                var  contentString = '<p><b>Username</b>: ' + user.username + '<br><b>Bicycle</b>: ' + user.bicycle + '<br>' + '<br><b>Rider height</b>: ' + user.height + ' inches' + '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note Lat, Lng format).
                 locations.push(new Location(
@@ -82,9 +81,9 @@ angular.module('gservice', [])
                         maxWidth: 320
                     }),
                     user.username,
-                    user.gender,
-                    user.age,
-                    user.favlang
+                    user.bicycle,
+                    user.height
+                    // user.extras
                 ))
             }
             // location is now an array populated with records in Google Maps format
@@ -92,13 +91,13 @@ angular.module('gservice', [])
         };
 
         // Constructor for generic location
-        var Location = function(latlon, message, username, gender, age, favlang){
+        var Location = function(latlon, message, username, bicycle, height){
             this.latlon = latlon;
             this.message = message;
             this.username = username;
-            this.gender = gender;
-            this.age = age;
-            this.favlang = favlang
+            this.bicycle = bicycle;
+            this.height = height
+            // this.extras = extras
         };
 
         // Initializes the map

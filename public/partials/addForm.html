@@ -6,7 +6,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Join the Scotch Team! <span class="glyphicon glyphicon-map-marker"></span></h2>
+            <h2 class="panel-title text-center">Post a bicycle! <span class="glyphicon glyphicon-map-marker"></span></h2>
         </div>
 
         <!-- Panel Body -->
@@ -35,18 +35,6 @@
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="radiotenmore" value="tenmore" ng-model="formData.bicycle">
-                        Ten or more speeds
-                    </label>
-                </div>
-                <div class="radio" required>
-                    <label>
-                        <input type="radio" name="optionsRadios" id="radiothreespeed" value="3 speed" ng-model="formData.bicycle">
-                        3 speed
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
                         <input type="radio" name="optionsRadios" id="radiotandem" value="tandem" ng-model="formData.bicycle">
                         Tandem
                     </label>
@@ -64,13 +52,14 @@
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="age">Ride Height</label>
-                    <input type="string" class="form-control" id="age" placeholder="5'3 to 5'6" ng-model="formData.height" required>
+                    <label for="age">Ride Height (in inches)</label>
+                    <input type="number" class="form-control" id="age" placeholder="64" ng-model="formData.height" required>
                 </div>
-                <div class="form-group">
+<!--                 <div class="form-group">
                     <label for="language">Extras</label>
                     <input type="text" class="form-control" id="language" placeholder="U-lock, helmet, lights, bike bell, basket ..." ng-model="formData.extras" required>
-                </div>
+                </div> -->
+
                 <div class="form-group">
                     <label for="latitude">Latitude</label>
                     <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>

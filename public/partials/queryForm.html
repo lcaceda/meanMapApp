@@ -29,11 +29,11 @@
                     <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
                 </div>
 
-                <!-- Note ng-true-value which translates check values into explicit gender strings -->
+                <!-- Note ng-true-value which translates check values into explicit strings -->
                 <label>Bicycle Type</label>
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checksingle" value="Single Speed" ng-model="formData.bicycle" ng-true-value = "'Name'">
+                        <input type="checkbox" name="optionsRadios" id="checksingle" value="Single Speed" ng-model="formData.bicycle" ng-true-value = "'Single Speed'">
                         Single Speed
                     </label>
                     <label class="checkbox-inline">
@@ -41,22 +41,26 @@
                         Fixie
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkother" value="What's it to ya?" ng-model="formData.other" ng-true-value="'What\'s it to ya?'">
-                        What's it to ya?
+                        <input type="checkbox" name="optionsRadios" id="checktandem" value="Tandem" ng-model="formData.tandem" ng-true-value="'Tandem'">
+                        Tandem
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checkroad" value="Road" ng-model="formData.road" ng-true-value="'Road'">
+                        Road
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checkcross" value="Cross" ng-model="formData.cross" ng-true-value="'Cross'">
+                        Cross
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="minage">Min. Age</label>
-                    <input type="number" class="form-control" id="minage" placeholder="5" ng-model="formData.minage">
+                    <label for="height">Height</label>
+                    <input type="number" class="form-control" id="height" placeholder="64" ng-model="formData.height">
                 </div>
-                <div class="form-group">
-                    <label for="maxage">Max Age</label>
-                    <input type="number" class="form-control" id="maxage" placeholder="80" ng-model="formData.maxage">
-                </div>
-                <div class="form-group">
-                    <label for="favlang">Favorite Language</label>
-                    <input type="text" class="form-control" id="favlang" placeholder="Fortran" ng-model="formData.favlang">
-                </div>
+ <!--                <div class="form-group">
+                    <label for="extras">Extras</label>
+                    <input type="text" class="form-control" id="extras" placeholder="U-lock, helmet, lights, bell, etc.." ng-model="formData.extras">
+                </div> -->
                 <div class="form-group">
                     <div class="checkbox">
                         <label>

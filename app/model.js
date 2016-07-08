@@ -5,9 +5,9 @@ var Schema      = mongoose.Schema;
 // Creates a User Schema. This will be the basis of how user data is stored in the db
 var UserSchema = new Schema({
     username: {type: String, required: true},
-    bicyle: {type: String, required: true},
-    height: {type: String, required: true},
-    extras: {type: String, required: true},
+    bicycle: {type: String, required: true},
+    height: {type: Number, required: true},
+    // extras: {type: String, required: true},
     location: {type: [Number], required: true}, // [Long, Lat]
     htmlverified: String,
     created_at: {type: Date, default: Date.now},
@@ -27,5 +27,5 @@ UserSchema.pre('save', function(next){
 // Indexes this schema in 2dsphere format (critical for running proximity searches)
 UserSchema.index({location: '2dsphere'});
 
-// Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
-module.exports = mongoose.model('scotch-user', UserSchema);
+// Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "bicycle-users"
+module.exports = mongoose.model('bicycle-user', UserSchema);

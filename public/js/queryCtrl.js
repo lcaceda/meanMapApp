@@ -37,12 +37,12 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
             longitude: parseFloat($scope.formData.longitude),
             latitude: parseFloat($scope.formData.latitude),
             distance: parseFloat($scope.formData.distance),
-            male: $scope.formData.male,
-            female: $scope.formData.female,
-            other: $scope.formData.other,
-            minAge: $scope.formData.minage,
-            maxAge: $scope.formData.maxage,
-            favlang: $scope.formData.favlang,
+            singlespeed: $scope.formData.singlespeed,
+            fixie: $scope.formData.fixie,
+            tandem: $scope.formData.tandem,
+            road: $scope.formData.road,
+            cross: $scope.formData.cross,
+            height: $scope.formData.height,
             reqVerified: $scope.formData.verified
         };
 

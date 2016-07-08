@@ -50,9 +50,9 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Grabs all of the text box fields
         var userData = {
             username: $scope.formData.username,
-            gender: $scope.formData.gender,
-            age: $scope.formData.age,
-            favlang: $scope.formData.favlang,
+            bicycle: $scope.formData.bicycle,
+            height: $scope.formData.height,
+            // extras: $scope.formData.extras,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
         };
@@ -63,9 +63,9 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
                 // Once complete, clear the form (except location)
                 $scope.formData.username = "";
-                $scope.formData.gender = "";
-                $scope.formData.age = "";
-                $scope.formData.favlang = "";
+                $scope.formData.bicycle = "";
+                $scope.formData.height = "";
+                // $scope.formData.extras = "";
 
             })
             .error(function(data) {
