@@ -6,7 +6,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Find Teammates! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
+            <h2 class="panel-title text-center">Find a bicycle! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
         </div>
 
         <!-- Panel Body -->
@@ -30,15 +30,15 @@
                 </div>
 
                 <!-- Note ng-true-value which translates check values into explicit gender strings -->
-                <label>Gender</label>
+                <label>Bicycle Type</label>
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkmale" value="Male" ng-model="formData.male" ng-true-value = "'Male'">
-                        Male
+                        <input type="checkbox" name="optionsRadios" id="checksingle" value="Single Speed" ng-model="formData.bicycle" ng-true-value = "'Name'">
+                        Single Speed
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkfemale" value="Female" ng-model="formData.female" ng-true-value="'Female'">
-                        Female
+                        <input type="checkbox" name="optionsRadios" id="checkfixie" value="Fixie" ng-model="formData.fixie" ng-true-value="'Fixie'">
+                        Fixie
                     </label>
                     <label class="checkbox-inline">
                         <input type="checkbox" name="optionsRadios" id="checkother" value="What's it to ya?" ng-model="formData.other" ng-true-value="'What\'s it to ya?'">

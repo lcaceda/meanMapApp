@@ -52,11 +52,8 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
             // Store the filtered results in queryResults
             .success(function(queryResults){
 
-                // Query Body and Result Logging
-                console.log("QueryBody:");
-                console.log(queryBody);
-                console.log("QueryResults:");
-                console.log(queryResults);
+                // Pass the filtered results to the Google Map Service and refresh the map
+                gservice.refresh(queryBody.latitude, queryBody.longitude, queryResults);
 
                 // Count the number of records retrieved for the panel-footer
                 $scope.queryCount = queryResults.length;
@@ -66,3 +63,4 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
             })
     };
 });
+

@@ -17,35 +17,59 @@
 
                 <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                 <div class="form-group">
-                    <label for="username">Username <span class="badge">All fields required</span></label>
-                    <input type="text" class="form-control" id="username" placeholder="OldandGold" ng-model="formData.username" required>
+                    <label for="username"> What's your bike's name? <span class="badge">All fields required</span></label>
+                    <input type="text" class="form-control" id="username" placeholder="Bikey!" ng-model="formData.username" required>
                 </div>
-                <label class="radio control-label">Gender</label>
+                <label class="radio control-label">Bicycle Type </label>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
-                        Male
+                        <input type="radio" name="optionsRadios" id="radiosingle" value="single speed" ng-model="formData.bicycle">
+                        Single Speed
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radiofixie" value="fixie" ng-model="formData.bicycle">
+                        Fixie
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radiotenmore" value="tenmore" ng-model="formData.bicycle">
+                        Ten or more speeds
                     </label>
                 </div>
                 <div class="radio" required>
                     <label>
-                        <input type="radio" name="optionsRadios" id="radiofemale" value="Female" ng-model="formData.gender">
-                        Female
+                        <input type="radio" name="optionsRadios" id="radiothreespeed" value="3 speed" ng-model="formData.bicycle">
+                        3 speed
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="radioother" value="What's it to ya?" ng-model="formData.gender">
-                        What's it to ya?
+                        <input type="radio" name="optionsRadios" id="radiotandem" value="tandem" ng-model="formData.bicycle">
+                        Tandem
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radioroad" value="road" ng-model="formData.bicycle">
+                        Road Bike
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radiocross" value="cross" ng-model="formData.bicycle">
+                        Cross Bike
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" class="form-control" id="age" placeholder="72" ng-model="formData.age" required>
+                    <label for="age">Ride Height</label>
+                    <input type="string" class="form-control" id="age" placeholder="5'3 to 5'6" ng-model="formData.height" required>
                 </div>
                 <div class="form-group">
-                    <label for="language">Favorite Language</label>
-                    <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
+                    <label for="language">Extras</label>
+                    <input type="text" class="form-control" id="language" placeholder="U-lock, helmet, lights, bike bell, basket ..." ng-model="formData.extras" required>
                 </div>
                 <div class="form-group">
                     <label for="latitude">Latitude</label>
